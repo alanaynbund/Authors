@@ -1,10 +1,10 @@
-const productController = require("../controllers/author.controller")
+const authorController = require("../controllers/author.controller")
 
 
 module.exports = app => {
-    app.post("/api/newauthor", productController.create),
-    app.get("/api/products", productController.getAll),
-    app.get("/api/products/:id", productController.getOne),
-    app.delete("/api/products/:id", productController.deleteOne),
-    app.put("/api/products/:id", productController.updateOne)
+    app.post("/api/newauthor", authorController.create),
+    app.get("/api/authors", authorController.getAll),
+    app.get("/api/authors/:id", authorController.getOne),
+    app.delete("/api/authors/:id", authorController.deleteOne),
+    app.put("/api/authors/:id", authorController.updateOne)
 }
