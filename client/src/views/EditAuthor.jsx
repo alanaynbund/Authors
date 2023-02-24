@@ -52,6 +52,11 @@ const EditAuthor = (props) => {
                         value={formData.name}
                     />
                 </div>
+                {
+                    errors?.name && (
+                        <span className="text-danger">{errors.name?.message}</span>
+                    )
+                }
                 <button className="btn btn-sm btn-outline-success">Submit</button>
             </form>
         </div>
